@@ -2,7 +2,7 @@
 /**
  * The template used for displaying featured page content in page-templates/front-page.php
  *
- * @package Edin
+ * @package wp-theme-hospital
  */
 ?>
 
