@@ -12,8 +12,8 @@
 	<header class="entry-header">
 		<h1 class="entry-title">
 			<a href="<?php esc_url(get_permalink()); ?>" rel="bookmark">
-				<span class="entry-title-en"><?php the_title('', ''); ?></span>
-				<span class="entry-title-ja"><?php the_field("titleja", $post->ID) ?></span>
+				<span class="entry-title-main"><?php the_title('', ''); ?></span>
+				<span class="entry-title-sub"><?php the_field("subtitle", $post->ID) ?></span>
 			</a>
 		</h1>
 	</header>
