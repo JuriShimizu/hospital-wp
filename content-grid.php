@@ -17,16 +17,4 @@
 			</a>
 		</h1>
 	</header>
-
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-		<p><a class="more-link" href="<?php the_permalink(); ?>" rel="bookmark">
-			<?php
-				/* translators: %s: Name of page. Visible to screen readers only. */
-				printf( __( 'Read more %s', 'edin' ), the_title( '<span class="screen-reader-text">', '</span>', false ) );
-			?>
-		</a></p>
-	</div><!-- .entry-summary -->
-
-	<?php edit_post_link( __( 'Edit', 'edin' ), '<footer class="entry-footer"><span class="edit-link">', '</span></footer>' ); ?>
 </article><!-- #post-## -->
