@@ -7,14 +7,23 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php edin_post_thumbnail(); ?>
 
-	<header class="entry-header">
-		<h1 class="entry-title">
-			<a href="<?php esc_url(get_permalink()); ?>" rel="bookmark">
+	<a class="post-thumbnail" href="<?php the_permalink(); ?>">
+		<?php
+			$ratio = get_theme_mod( 'edin_thumbnail_style' );
+			switch ( $ratio ) {
+				case 'square':
+					the_post_thumbnail( 'edin-thumbnail-square' );
+					break;
+				default :
+					the_post_thumbnail( 'edin-thumbnail-landscape' );
+			}
+		?>
+		<header class="entry-header">
+			<h1 class="entry-title">
 				<div class="entry-title-main"><?php the_title('', ''); ?></div>
 				<div class="entry-title-sub"><?php the_field("subtitle", $post->ID) ?></div>
-			</a>
-		</h1>
-	</header>
+			</h1>
+		</header>
+	</a>
 </article><!-- #post-## -->
