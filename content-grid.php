@@ -7,26 +7,23 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php edin_post_thumbnail(); ?>
 
-	<header class="entry-header">
-		<h1 class="entry-title">
-			<a href="<?php esc_url(get_permalink()); ?>" rel="bookmark">
-				<span class="entry-title-main"><?php the_title('', ''); ?></span>
-				<span class="entry-title-sub"><?php the_field("subtitle", $post->ID) ?></span>
-			</a>
-		</h1>
-	</header>
-
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-		<p><a class="more-link" href="<?php the_permalink(); ?>" rel="bookmark">
-			<?php
-				/* translators: %s: Name of page. Visible to screen readers only. */
-				printf( __( 'Read more %s', 'edin' ), the_title( '<span class="screen-reader-text">', '</span>', false ) );
-			?>
-		</a></p>
-	</div><!-- .entry-summary -->
-
-	<?php edit_post_link( __( 'Edit', 'edin' ), '<footer class="entry-footer"><span class="edit-link">', '</span></footer>' ); ?>
+	<a class="post-thumbnail" href="<?php the_permalink(); ?>">
+		<?php
+			$ratio = get_theme_mod( 'edin_thumbnail_style' );
+			switch ( $ratio ) {
+				case 'square':
+					the_post_thumbnail( 'edin-thumbnail-square' );
+					break;
+				default :
+					the_post_thumbnail( 'edin-thumbnail-landscape' );
+			}
+		?>
+		<header class="entry-header">
+			<h1 class="entry-title">
+				<div class="entry-title-main"><?php the_title('', ''); ?></div>
+				<div class="entry-title-sub"><?php the_field("subtitle", $post->ID) ?></div>
+			</h1>
+		</header>
+	</a>
 </article><!-- #post-## -->
