@@ -21,4 +21,6 @@ $featured_image = wp_get_attachment_image_src(
 		</div>
 	</a>
 
+<?php edit_post_link( __( 'Edit', 'edin' ), '<footer class="entry-footer"><span class="edit-link">', '</span></footer>' ); ?>
+
 </article><!-- #post-## -->

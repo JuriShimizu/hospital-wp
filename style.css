@@ -3496,6 +3496,16 @@ a:hover {
   color: #1279be;
 }
 
+body:not(.no-image-filter) .hero.with-featured-image:before {
+  background: none;
+  opacity: 1;
+}
+
+.site-branding,
+.site-branding p {
+  max-width: inherit;
+}
+
 .entry-title-grid {
   display: block;
   text-align: center;
@@ -3504,25 +3514,34 @@ a:hover {
   outline: 5px solid #ddd;
 }
 
-.entry-title-grid:hover {
+.entry-title-grid:hover,
+.entry-title-grid:focus {
   outline: 5px solid #1279be;
 }
 
-.entry-title-inner {
+.entry-title-inner,
+.hero-inner {
   background-image: url(images/bg_mask.png);
   background-color: rgba(0, 0, 0, .4);
   padding: 50px 30px;
 }
 
-.entry-title-inner:hover .entry-title-main,
-.entry-title-inner:hover .entry-title-sub {
+.entry-title-grid:hover .entry-title-main,
+.entry-title-grid:hover .entry-title-sub,
+.entry-title-grid:focus .entry-title-main,
+.entry-title-grid:focus .entry-title-sub {
   font-weight: 900;
   color: #1279be;
-  text-shadow: 0 0 5px #fff;
+  text-shadow: 0 0 10px #fff, 0 0 10px #fff;
 }
 
-.entry-title-main,
-.entry-title-sub {
+.entry-title-grid:hover .entry-title-main,
+.entry-title-grid:focus .entry-title-main {
+  border-bottom: 1px solid #1279be;
+}
+
+.entry-title-grid .entry-title-main,
+.entry-title-grid .entry-title-sub {
   letter-spacing: 5px;
   font-size: 1.5em;
   color: #fff;
@@ -3531,6 +3550,59 @@ a:hover {
   white-space: nowrap;
 }
 
-.entry-title-main {
+.entry-title-grid .entry-title-main {
   border-bottom: 1px solid #fff;
 }
+
+.hero.hero-single {
+  padding: 0;
+}
+
+.hero-inner {
+  padding: 50px 100px;
+}
+
+.hero-single .entry-title-main,
+.hero-single .entry-title-sub {
+  font-size: 2em;
+  color: #fff;
+  text-align: center;
+}
+
+
+.hero-single .entry-title-main {
+  border-bottom: 1px solid #fff;
+}
+
+@media screen and (min-width: 600px) {
+  .hero-inner {
+    padding: 30px 100px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero-inner {
+    padding: 60px 100px;
+  }
+}
+
+@media screen and (min-width: 1020px) {
+  .hero.with-featured-image,
+  body[class*="front-page"] {
+    padding: 0;
+  }
+  .hero-inner {
+    padding: 120px 100px;
+  }
+}
+
+@media screen and (min-width: 1230px) {
+  .hero.with-featured-image,
+  body[class*="front-page"] {
+    padding: 0;
+  }
+  .hero-inner {
+    padding: 180px 100px;
+  }
+}
+
