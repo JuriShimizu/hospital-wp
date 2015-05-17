@@ -1999,7 +1999,7 @@ body[class*="front-page"] .hero .page-title {
 /* Grid Page & Featured Page */
 .featured-page .entry-title,
 .grid .entry-title {
-	font-size: 32px;
+	font-size: 2em;
 	line-height: 1.5em;
 	position: absolute;
 	top: 0;
