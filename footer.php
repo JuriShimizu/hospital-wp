@@ -14,7 +14,7 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="footer-wrapper clear">
-      <div class="site-info">&copy; <?php echo date( 'Y' ); ?> <?php bloginfo( 'name' ); ?></div>
+			<div class="site-info">&copy; <?php echo date( 'Y' ); ?> <?php bloginfo( 'name' ); ?></div>
 			<?php if ( has_nav_menu( 'footer' ) ) : ?>
 				<nav class="footer-navigation" role="navigation">
 					<?php
