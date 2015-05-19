@@ -3494,6 +3494,7 @@ a {
 
 a:hover {
   color: #1279be;
+  text-shadow: 0 0 10px #fff, 0 0 10px #fff;
 }
 
 body:not(.no-image-filter) .hero.with-featured-image:before {
@@ -3532,7 +3533,6 @@ body:not(.no-image-filter) .hero.with-featured-image:before {
 .entry-title-grid:focus .entry-title-sub {
   font-weight: 900;
   color: #1279be;
-  text-shadow: 0 0 10px #fff, 0 0 10px #fff;
 }
 
 .entry-title-grid:hover .entry-title-main,
@@ -3546,7 +3546,6 @@ body:not(.no-image-filter) .hero.with-featured-image:before {
   font-size: 1.5em;
   color: #fff;
   font-weight: normal;
-  transition-duration: .3s;
   white-space: nowrap;
 }
 
@@ -3559,14 +3558,16 @@ body:not(.no-image-filter) .hero.with-featured-image:before {
 }
 
 .hero-inner {
-  padding: 50px 100px;
+  padding: 50px 30px;
 }
 
 .hero-single .entry-title-main,
 .hero-single .entry-title-sub {
+  letter-spacing: 5px;
   font-size: 2em;
   color: #fff;
   text-align: center;
+  text-transform: uppercase;
 }
 
 
@@ -3576,13 +3577,13 @@ body:not(.no-image-filter) .hero.with-featured-image:before {
 
 @media screen and (min-width: 600px) {
   .hero-inner {
-    padding: 30px 100px;
+    padding: 30px 50px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .hero-inner {
-    padding: 60px 100px;
+    padding: 60px 70px;
   }
 }
 
@@ -3592,7 +3593,7 @@ body:not(.no-image-filter) .hero.with-featured-image:before {
     padding: 0;
   }
   .hero-inner {
-    padding: 120px 100px;
+    padding: 120px 120px;
   }
 }
 
@@ -3602,7 +3603,7 @@ body:not(.no-image-filter) .hero.with-featured-image:before {
     padding: 0;
   }
   .hero-inner {
-    padding: 180px 100px;
+    padding: 180px 150px;
   }
 }
 
