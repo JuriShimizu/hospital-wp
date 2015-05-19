@@ -3502,6 +3502,12 @@ body:not(.no-image-filter) .hero.with-featured-image:before {
   opacity: 1;
 }
 
+.noize {
+  background-image: url(images/bg_mask.png);
+  background-color: rgba(0, 0, 0, .4);
+  padding: 50px 30px;
+}
+
 .site-branding,
 .site-branding p {
   max-width: inherit;
@@ -3518,13 +3524,6 @@ body:not(.no-image-filter) .hero.with-featured-image:before {
 .entry-title-grid:hover,
 .entry-title-grid:focus {
   outline: 5px solid #1279be;
-}
-
-.entry-title-inner,
-.hero-inner {
-  background-image: url(images/bg_mask.png);
-  background-color: rgba(0, 0, 0, .4);
-  padding: 50px 30px;
 }
 
 .entry-title-grid:hover .entry-title-main,

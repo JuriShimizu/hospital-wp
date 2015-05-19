@@ -8,7 +8,7 @@
 
 	<?php if ( ! is_page_template( 'page-templates/front-page.php' ) ) : ?>
 <div class="hero hero-single <?php echo edin_additional_class(); ?>">
-	<div class="hero-inner">
+	<div class="hero-inner noize">
 
 		<h2 class="entry-title-main"><?php the_title('', ''); ?></h2>
 		<div class="entry-title-sub"><?php the_field("subtitle", $post->ID) ?></div>

@@ -15,7 +15,7 @@ $featured_image = wp_get_attachment_image_src(
 ?>
 
 	<a href="<?php esc_url(the_permalink()); ?>" class="entry-title entry-title-grid" style="background-image: url(<?php echo $featured_image[0]; ?>);">
-		<div class="entry-title-inner">
+		<div class="noize">
 				<h2 class="entry-title-main"><?php the_title('', ''); ?></h2>
 				<div class="entry-title-sub"><?php the_field("subtitle", $post->ID) ?></div>
 		</div>
