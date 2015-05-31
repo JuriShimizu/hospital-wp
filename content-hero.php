@@ -2,11 +2,11 @@
 /**
  * The template used for displaying hero content in page.php and page-templates.
  *
- * @package Edin
+ * @package hospital
  */
 ?>
 
-	<?php if ( ! is_page_template( 'page-templates/front-page.php' ) ) : ?>
+<?php if ( ! is_page_template( 'page-templates/front-page.php' ) ) : ?>
 <div class="hero hero-single <?php echo edin_additional_class(); ?>">
 	<div class="hero-inner noize">
 
@@ -15,8 +15,8 @@
 
 	</div>
 </div>
-	<?php else : ?>
-<div class="hero <?php echo edin_additional_class(); ?>">
+<?php else : ?>
+<div class="hero hero-front <?php echo edin_additional_class(); ?>">
 
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<?php
@@ -40,7 +40,13 @@
 
 	</div>
 </div><!-- .hero -->
-	<?php endif; ?>
+<div class="notice">
+	<div class="notice-inner">
+    <h6><?php echo get_post(get_page_by_path('notice'))->post_title; ?></h6>
+		<?php echo get_post(get_page_by_path('notice'))->post_content; ?>
+	</div>
+</div>
+<?php endif; ?>
 
 <?php
 	if ( ! function_exists( 'jetpack_breadcrumbs' ) || 0 == get_theme_mod( 'edin_breadcrumbs' ) || ! is_page() || is_page_template( 'page-templates/front-page.php' ) || is_front_page() ) {

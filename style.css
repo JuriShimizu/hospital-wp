@@ -3552,6 +3552,10 @@ body:not(.no-image-filter) .hero.with-featured-image:before {
   border-bottom: 1px solid #fff;
 }
 
+.hero.hero-front {
+  font-size: 1.5em;
+}
+
 .hero.hero-single {
   padding: 0;
 }
@@ -3574,6 +3578,21 @@ body:not(.no-image-filter) .hero.with-featured-image:before {
   border-bottom: 1px solid #fff;
 }
 
+.notice {
+  padding: 20px 30px;
+  max-width: 1230px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.notice-inner {
+  padding: 10px;
+}
+
+.notice-inner h6 {
+  margin: 0;
+}
+
 @media screen and (min-width: 600px) {
   .hero-inner {
     padding: 30px 50px;
@@ -3591,6 +3610,7 @@ body:not(.no-image-filter) .hero.with-featured-image:before {
   body[class*="front-page"] {
     padding: 0;
   }
+
   .hero-inner {
     padding: 120px 120px;
   }
@@ -3601,6 +3621,7 @@ body:not(.no-image-filter) .hero.with-featured-image:before {
   body[class*="front-page"] {
     padding: 0;
   }
+
   .hero-inner {
     padding: 180px 150px;
   }
